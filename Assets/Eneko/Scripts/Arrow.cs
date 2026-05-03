@@ -5,7 +5,7 @@ public class Arrow : MonoBehaviour
     Rigidbody rb;
     ArrowPath path;
     public bool thisArrowIsActive = true;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -17,7 +17,9 @@ public class Arrow : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Target"))
         {
             thisArrowIsActive = false;
-            path.NextPath();
+
+            if (path != null) path.NextPath(); // Llamada segura
+
             gameObject.SetActive(false);
         }
     }

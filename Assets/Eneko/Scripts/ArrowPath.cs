@@ -31,4 +31,14 @@ public class ArrowPath : MonoBehaviour
             Debug.Log("Se ha llegado al final de la ruta de flechas.");
         }
     }
+    //private void LateUpdate()
+    //{
+    //    for (int i = 0; i < arrows.Length; i++)
+    //    {
+    //        if (arrows[i].activeSelf)
+    //        {
+    //            arrows[i].transform.rotation = Quaternion.LookRotation(Vector3.forward);
+    //        }
+    //    }
+    //}
 }
